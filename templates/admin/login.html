@@ -1,0 +1,14 @@
+{% extends "admin/login.html" %}
+{% load static %}
+
+{% block extrastyle %}
+    {{ block.super }}
+    <div id="particles-js" style="position: absolute;z-index: -1; height: 99vh; top: 0;left: 0;
+    right: 0;"></div>
+    <script src="{% static 'js/particles.min.js' %}"></script>
+    <script>
+        particlesJS.load('particles-js', '{% static 'particles.json' %}', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+{% endblock %}
