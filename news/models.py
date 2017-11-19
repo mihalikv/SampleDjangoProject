@@ -11,6 +11,9 @@ class EventAbstractModel(models.Model):
     title = models.CharField(verbose_name="Nadpis", max_length=255)
     description = RichTextField(verbose_name="Popis")
 
+    def __str__(self):
+        return self.title
+
     class Meta:
         abstract = True
 
